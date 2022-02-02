@@ -5,4 +5,5 @@
     <string name="txt_versus" translatable="false">x</string>
     <string name="cd_away_team">Away Team Image</string>
     <string name="cd_home_team">cd_home_team</string>
+    <string name="error_api">Unexepected error</string>
 </resources>
