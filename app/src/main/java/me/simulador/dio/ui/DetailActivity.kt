@@ -38,14 +38,14 @@ class DetailActivity : AppCompatActivity() {
 
             binding.tvDescription.text = it.description
 
-            Glide.with(this).load(it.place.image).into(binding.ivHomeTeam)
-            binding.tvAwayTeamName.text = it.homeTeam.name
+            Glide.with(this).load(it.homeTeam.image).into(binding.ivHomeTeam)
+            binding.tvHomeTeamName.text = it.homeTeam.name
             binding.rbHomeTeamStars.rating = it.homeTeam.starts.toFloat()
             if (it.homeTeam.score != null) {
                 binding.tvHomeTeamScore.text = it.homeTeam.score.toString()
             }
 
-            Glide.with(this).load(it.place.image).into(binding.ivAwayTeam)
+            Glide.with(this).load(it.awayTeam.image).into(binding.ivAwayTeam)
             binding.tvAwayTeamName.text = it.awayTeam.name
             binding.rbAwayTeamStars.rating = it.awayTeam.starts.toFloat()
             if (it.awayTeam.score != null) {

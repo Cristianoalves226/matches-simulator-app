@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Match(
 
-    @SerializedName("descricao")
+    @SerializedName("descricão")
     val description: String,
 
     @SerializedName("local")

@@ -54,12 +54,12 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
         Match match = matches.get(position);
 
 
-        Glide.with(context).load(match.getHomeTeam().getImage()).into(holder.binding.ivHomeTeam);
+        Glide.with(context).load(match.getHomeTeam().getImage()).circleCrop().into(holder.binding.ivHomeTeam);
         holder.binding.tvHomeTeamName.setText(match.getHomeTeam().getName());
         if (match.getHomeTeam().getScore() != null) {
             holder.binding.tvHomeTeamName.setText(String.valueOf(match.getHomeTeam().getScore()));
         }
-        Glide.with(context).load(match.getHomeTeam().getImage()).circleCrop().into(holder.binding.ivAwayTeam);
+        Glide.with(context).load(match.getAwayTeam().getImage()).circleCrop().into(holder.binding.ivAwayTeam);
         holder.binding.tvAwayTeamName.setText(match.getAwayTeam().getName());
         if (match.getAwayTeam().getScore() != null) {
             holder.binding.tvAwayTeamName.setText(String.valueOf(match.getAwayTeam().getScore()));
